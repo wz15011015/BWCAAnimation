@@ -7,6 +7,12 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		061E7FFD22FD0903003C9559 /* CASpringAnimationViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 061E7FFA22FD0903003C9559 /* CASpringAnimationViewController.m */; };
+		061E7FFE22FD0903003C9559 /* CASpringAnimationListViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 061E7FFC22FD0903003C9559 /* CASpringAnimationListViewController.m */; };
+		061E800522FD0A9B003C9559 /* Const.m in Sources */ = {isa = PBXBuildFile; fileRef = 061E800422FD0A9B003C9559 /* Const.m */; };
+		061E800A22FD13B5003C9559 /* CAAnimationGroupListViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 061E800622FD13B5003C9559 /* CAAnimationGroupListViewController.m */; };
+		061E800B22FD13B5003C9559 /* CAAnimationGroupViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 061E800722FD13B5003C9559 /* CAAnimationGroupViewController.m */; };
+		061E801422FD4704003C9559 /* CAAnimationHintViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 061E801322FD4704003C9559 /* CAAnimationHintViewController.m */; };
 		84681467204596EF00395059 /* CABasicAnimationViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 84681466204596EF00395059 /* CABasicAnimationViewController.m */; };
 		8468146A2045971200395059 /* CABasicAnimationListViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 846814692045971200395059 /* CABasicAnimationListViewController.m */; };
 		847BC042204CEF8100D85C17 /* BeautifulSceneViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 847BC041204CEF8100D85C17 /* BeautifulSceneViewController.m */; };
@@ -47,6 +53,18 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		061E7FF922FD0903003C9559 /* CASpringAnimationViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CASpringAnimationViewController.h; sourceTree = "<group>"; };
+		061E7FFA22FD0903003C9559 /* CASpringAnimationViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CASpringAnimationViewController.m; sourceTree = "<group>"; };
+		061E7FFB22FD0903003C9559 /* CASpringAnimationListViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CASpringAnimationListViewController.h; sourceTree = "<group>"; };
+		061E7FFC22FD0903003C9559 /* CASpringAnimationListViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CASpringAnimationListViewController.m; sourceTree = "<group>"; };
+		061E800322FD0A9B003C9559 /* Const.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Const.h; sourceTree = "<group>"; };
+		061E800422FD0A9B003C9559 /* Const.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Const.m; sourceTree = "<group>"; };
+		061E800622FD13B5003C9559 /* CAAnimationGroupListViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CAAnimationGroupListViewController.m; sourceTree = "<group>"; };
+		061E800722FD13B5003C9559 /* CAAnimationGroupViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CAAnimationGroupViewController.m; sourceTree = "<group>"; };
+		061E800822FD13B5003C9559 /* CAAnimationGroupViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CAAnimationGroupViewController.h; sourceTree = "<group>"; };
+		061E800922FD13B5003C9559 /* CAAnimationGroupListViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CAAnimationGroupListViewController.h; sourceTree = "<group>"; };
+		061E801222FD4704003C9559 /* CAAnimationHintViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CAAnimationHintViewController.h; sourceTree = "<group>"; };
+		061E801322FD4704003C9559 /* CAAnimationHintViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CAAnimationHintViewController.m; sourceTree = "<group>"; };
 		84681465204596EF00395059 /* CABasicAnimationViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CABasicAnimationViewController.h; sourceTree = "<group>"; };
 		84681466204596EF00395059 /* CABasicAnimationViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CABasicAnimationViewController.m; sourceTree = "<group>"; };
 		846814682045971200395059 /* CABasicAnimationListViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CABasicAnimationListViewController.h; sourceTree = "<group>"; };
@@ -114,6 +132,15 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		061E800222FD0A91003C9559 /* Const */ = {
+			isa = PBXGroup;
+			children = (
+				061E800322FD0A9B003C9559 /* Const.h */,
+				061E800422FD0A9B003C9559 /* Const.m */,
+			);
+			path = Const;
+			sourceTree = "<group>";
+		};
 		849BC455204695D400A2D9B6 /* CAKeyframeAnimation */ = {
 			isa = PBXGroup;
 			children = (
@@ -146,6 +173,10 @@
 		849BC458204695DE00A2D9B6 /* Controller */ = {
 			isa = PBXGroup;
 			children = (
+				061E7FFB22FD0903003C9559 /* CASpringAnimationListViewController.h */,
+				061E7FFC22FD0903003C9559 /* CASpringAnimationListViewController.m */,
+				061E7FF922FD0903003C9559 /* CASpringAnimationViewController.h */,
+				061E7FFA22FD0903003C9559 /* CASpringAnimationViewController.m */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -180,6 +211,10 @@
 		849BC45C204695F100A2D9B6 /* Controller */ = {
 			isa = PBXGroup;
 			children = (
+				061E800922FD13B5003C9559 /* CAAnimationGroupListViewController.h */,
+				061E800622FD13B5003C9559 /* CAAnimationGroupListViewController.m */,
+				061E800822FD13B5003C9559 /* CAAnimationGroupViewController.h */,
+				061E800722FD13B5003C9559 /* CAAnimationGroupViewController.m */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -253,13 +288,13 @@
 		84CBC21C2045802D00B1EBC0 /* Main */ = {
 			isa = PBXGroup;
 			children = (
+				84CBC220204583FB00B1EBC0 /* Base */,
 				84CBC2242045840200B1EBC0 /* CABasicAnimation */,
 				849BC455204695D400A2D9B6 /* CAKeyframeAnimation */,
 				849BC457204695DE00A2D9B6 /* CASpringAnimation */,
 				849BC459204695E900A2D9B6 /* CATransition */,
 				849BC45B204695F100A2D9B6 /* CAAnimationGroup */,
 				84C9E5EA2047C86000C19B8A /* Other */,
-				84CBC220204583FB00B1EBC0 /* Base */,
 			);
 			path = Main;
 			sourceTree = "<group>";
@@ -268,8 +303,6 @@
 			isa = PBXGroup;
 			children = (
 				84CBC221204583FB00B1EBC0 /* Controller */,
-				84CBC222204583FB00B1EBC0 /* Model */,
-				84CBC223204583FB00B1EBC0 /* View */,
 			);
 			path = Base;
 			sourceTree = "<group>";
@@ -287,26 +320,10 @@
 			path = Controller;
 			sourceTree = "<group>";
 		};
-		84CBC222204583FB00B1EBC0 /* Model */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Model;
-			sourceTree = "<group>";
-		};
-		84CBC223204583FB00B1EBC0 /* View */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = View;
-			sourceTree = "<group>";
-		};
 		84CBC2242045840200B1EBC0 /* CABasicAnimation */ = {
 			isa = PBXGroup;
 			children = (
 				84CBC2252045840200B1EBC0 /* Controller */,
-				84CBC2262045840200B1EBC0 /* Model */,
-				84CBC2272045840200B1EBC0 /* View */,
 			);
 			path = CABasicAnimation;
 			sourceTree = "<group>";
@@ -318,38 +335,19 @@
 				846814692045971200395059 /* CABasicAnimationListViewController.m */,
 				84681465204596EF00395059 /* CABasicAnimationViewController.h */,
 				84681466204596EF00395059 /* CABasicAnimationViewController.m */,
+				061E801222FD4704003C9559 /* CAAnimationHintViewController.h */,
+				061E801322FD4704003C9559 /* CAAnimationHintViewController.m */,
 			);
 			path = Controller;
-			sourceTree = "<group>";
-		};
-		84CBC2262045840200B1EBC0 /* Model */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Model;
-			sourceTree = "<group>";
-		};
-		84CBC2272045840200B1EBC0 /* View */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = View;
 			sourceTree = "<group>";
 		};
 		84CBC2342045902200B1EBC0 /* Expand */ = {
 			isa = PBXGroup;
 			children = (
-				84CBC2352045902200B1EBC0 /* Const */,
+				061E800222FD0A91003C9559 /* Const */,
 				84CBC2362045902200B1EBC0 /* Macro */,
 			);
 			path = Expand;
-			sourceTree = "<group>";
-		};
-		84CBC2352045902200B1EBC0 /* Const */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Const;
 			sourceTree = "<group>";
 		};
 		84CBC2362045902200B1EBC0 /* Macro */ = {
@@ -422,7 +420,7 @@
 		84CBC1DC20457EB400B1EBC0 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
-				LastUpgradeCheck = 0910;
+				LastUpgradeCheck = 1030;
 				ORGANIZATIONNAME = BTStudio;
 				TargetAttributes = {
 					84CBC1E320457EB400B1EBC0 = {
@@ -496,9 +494,14 @@
 				847BC045204D1D1300D85C17 /* CATransitionListViewController.m in Sources */,
 				8468146A2045971200395059 /* CABasicAnimationListViewController.m in Sources */,
 				84CBC23020458C1300B1EBC0 /* BTSBaseViewController.m in Sources */,
+				061E800522FD0A9B003C9559 /* Const.m in Sources */,
 				84C9E5ED2047C87200C19B8A /* OtherListViewController.m in Sources */,
 				849BC45F2046961800A2D9B6 /* CAKeyframeAnimationListViewController.m in Sources */,
+				061E800B22FD13B5003C9559 /* CAAnimationGroupViewController.m in Sources */,
 				849BC4622046962700A2D9B6 /* CAKeyframeAnimationViewController.m in Sources */,
+				061E801422FD4704003C9559 /* CAAnimationHintViewController.m in Sources */,
+				061E800A22FD13B5003C9559 /* CAAnimationGroupListViewController.m in Sources */,
+				061E7FFD22FD0903003C9559 /* CASpringAnimationViewController.m in Sources */,
 				84CBC1F220457EB500B1EBC0 /* CAAnimation.xcdatamodeld in Sources */,
 				84CBC22A2045848400B1EBC0 /* BTSNavigationController.m in Sources */,
 				847BC042204CEF8100D85C17 /* BeautifulSceneViewController.m in Sources */,
@@ -506,6 +509,7 @@
 				84681467204596EF00395059 /* CABasicAnimationViewController.m in Sources */,
 				84C9E5F02047C8FB00C19B8A /* OtherViewController.m in Sources */,
 				84CBC1E920457EB500B1EBC0 /* AppDelegate.m in Sources */,
+				061E7FFE22FD0903003C9559 /* CASpringAnimationListViewController.m in Sources */,
 				84CBC23320458E2100B1EBC0 /* CAAnimationViewController.m in Sources */,
 				847BC048204D1DB500D85C17 /* CATransitionViewController.m in Sources */,
 			);
@@ -576,6 +580,7 @@
 				CLANG_WARN_BOOL_CONVERSION = YES;
 				CLANG_WARN_COMMA = YES;
 				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
 				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
 				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
 				CLANG_WARN_EMPTY_BODY = YES;
@@ -583,6 +588,7 @@
 				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
 				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
 				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
 				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
@@ -631,6 +637,7 @@
 				CLANG_WARN_BOOL_CONVERSION = YES;
 				CLANG_WARN_COMMA = YES;
 				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
 				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
 				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
 				CLANG_WARN_EMPTY_BODY = YES;
@@ -638,6 +645,7 @@
 				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
 				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
 				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
 				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;

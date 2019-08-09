@@ -2,7 +2,7 @@
 //  CABasicAnimationListViewController.m
 //  CAAnimation
 //
-//  Created by ff on 2018/2/27.
+//  Created by wangzhi on 2018/2/27.
 //  Copyright © 2018年 BTStudio. All rights reserved.
 //
 
@@ -121,8 +121,8 @@
                      @"bounds (大小缩放,中心位置不变)",
                      @"position (中心位置变化,大小不变)",
                      @"backgroundColor (背景颜色的变化)",
-                     @"opacity (透明度)",
-                     @"contents (内容,比如UIImageView的图片)",
+                     @"opacity (透明度变化)",
+                     @"contents (内容变化,比如UIImageView的图片)",
                      @"cornerRadius (圆角变化)",
                      @"borderWidth (边框线宽度变化)",
                      @"borderColor (边框线颜色变化)"];

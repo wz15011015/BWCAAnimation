@@ -2,7 +2,7 @@
 //  OtherListViewController.m
 //  CAAnimation
 //
-//  Created by ff on 2018/3/1.
+//  Created by wangzhi on 2018/3/1.
 //  Copyright © 2018年 BTStudio. All rights reserved.
 //
 

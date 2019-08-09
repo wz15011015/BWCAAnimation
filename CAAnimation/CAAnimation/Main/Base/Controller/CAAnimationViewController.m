@@ -2,7 +2,7 @@
 //  CAAnimationViewController.m
 //  CAAnimation
 //
-//  Created by ff on 2018/2/27.
+//  Created by wangzhi on 2018/2/27.
 //  Copyright © 2018年 BTStudio. All rights reserved.
 //
 
@@ -10,7 +10,10 @@
 #import "Macro.h"
 #import "CABasicAnimationListViewController.h"
 #import "CAKeyframeAnimationListViewController.h"
+#import "CASpringAnimationListViewController.h"
 #import "CATransitionListViewController.h"
+#import "CAAnimationGroupListViewController.h"
+#import "CAAnimationHintViewController.h"
 #import "OtherListViewController.h"
 
 @interface CAAnimationViewController () <UITableViewDelegate, UITableViewDataSource>
@@ -45,7 +48,7 @@
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
     if (0 == section) {
-        return 3;
+        return 4;
     } else if (1 == section) {
         return 1;
     } else if (2 == section) {
@@ -67,6 +70,8 @@
             text = @"CAKeyframeAnimation (关键帧动画)";
         } else if (2 == indexPath.row) {
             text = @"CASpringAnimation (弹性动画)";
+        } else if (3 == indexPath.row) {
+            text = @"CAAnimation 注意点";
         }
     } else if (1 == indexPath.section) {
         text = @"CATransition (转场动画)";
@@ -118,14 +123,29 @@
             
         } else if (2 == indexPath.row) {
             title = @"CASpringAnimation (弹性动画)";
+            CASpringAnimationListViewController *vc = [[CASpringAnimationListViewController alloc] init];
+            vc.title = title;
+            [self.navigationController pushViewController:vc animated:YES];
+            
+        }  else if (3 == indexPath.row) {
+            title = @"CAAnimation 注意点";
+            CAAnimationHintViewController * vc = [[CAAnimationHintViewController alloc] init];
+            vc.title = title;
+            [self.navigationController pushViewController:vc animated:YES];
         }
+        
     } else if (1 == indexPath.section) {
         title = @"CATransition (转场动画)";
         CATransitionListViewController *vc = [[CATransitionListViewController alloc] init];
         vc.title = title;
         [self.navigationController pushViewController:vc animated:YES];
+        
     } else if (2 == indexPath.section) {
         title = @"CAAnimationGroup (组动画)";
+        CAAnimationGroupListViewController *vc = [[CAAnimationGroupListViewController alloc] init];
+        vc.title = title;
+        [self.navigationController pushViewController:vc animated:YES];
+        
     } else if (3 == indexPath.section) {
         title = @"其他";
         OtherListViewController *vc = [[OtherListViewController alloc] init];
