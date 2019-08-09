@@ -1,5 +1,6 @@
 # BWCAAnimation
 
+![](https://img.shields.io/badge/platform-iOS-red.svg) ![](https://img.shields.io/badge/language-Objective--C-orange.svg) ![](https://img.shields.io/badge/license-MIT%20License-brightgreen.svg) 
 
 ## Introduction
 CoreAnimation相关知识及其使用示例。
