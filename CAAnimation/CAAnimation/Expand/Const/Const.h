@@ -53,3 +53,55 @@ typedef NS_ENUM(NSUInteger, AnimationKeyPath) {
     AnimationKeyPathBorderWidth,
     AnimationKeyPathBorderColor,
 };
+
+
+/**
+ 转场动画效果
+
+ - TransitionAnimationkCATransitionFade: kCATransitionFade
+ - TransitionAnimationkCATransitionMoveIn: kCATransitionMoveIn
+ - TransitionAnimationkCATransitionPush: kCATransitionPush
+ - TransitionAnimationkCATransitionReveal: kCATransitionReveal
+ - TransitionAnimationCube: cube
+ - TransitionAnimationSuckEffect: suckEffect
+ - TransitionAnimationRippleEffect: rippleEffect
+ - TransitionAnimationPageCurl: pageCurl
+ - TransitionAnimationPageUnCurl: pageUnCurl
+ - TransitionAnimationOglFlip: oglFlip
+ - TransitionAnimationCameraIrisHollowOpen: cameraIrisHollowOpen
+ - TransitionAnimationCameraIrisHollowClose: cameraIrisHollowClose
+ - TransitionAnimationSpewEffect: spewEffect
+ - TransitionAnimationGenieEffect: genieEffect
+ - TransitionAnimationUnGenieEffect: unGenieEffect
+ - TransitionAnimationTwist: twist
+ - TransitionAnimationTubey: tubey
+ - TransitionAnimationSwirl: swirl
+ - TransitionAnimationCharminUltra: charminUltra
+ - TransitionAnimationZoomyIn: zoomyIn
+ - TransitionAnimationZoomyOut: zoomyOut
+ - TransitionAnimationOglApplicationSuspend: oglApplicationSuspend
+ */
+typedef NS_ENUM(NSUInteger, TransitionAnimationType) {
+    TransitionAnimationkCATransitionFade,
+    TransitionAnimationkCATransitionMoveIn,
+    TransitionAnimationkCATransitionPush,
+    TransitionAnimationkCATransitionReveal,
+    TransitionAnimationCube,
+    TransitionAnimationSuckEffect,
+    TransitionAnimationRippleEffect,
+    TransitionAnimationPageCurl,
+    TransitionAnimationPageUnCurl,
+    TransitionAnimationOglFlip,
+    TransitionAnimationCameraIrisHollowOpen,
+    TransitionAnimationCameraIrisHollowClose,
+    TransitionAnimationSpewEffect,
+    TransitionAnimationGenieEffect,
+    TransitionAnimationUnGenieEffect,
+    TransitionAnimationTwist,
+    TransitionAnimationTubey,
+    TransitionAnimationSwirl,
+    TransitionAnimationCharminUltra,
+    TransitionAnimationZoomyIn,
+    TransitionAnimationZoomyOut,
+    TransitionAnimationOglApplicationSuspend,
+};

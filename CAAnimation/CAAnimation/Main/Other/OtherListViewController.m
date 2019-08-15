@@ -23,8 +23,8 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     
-    self.dataArr = @[@"CALayer",
-                     @"CALayer绘图"];
+    self.dataArr = @[@"CALayer 图层使用",
+                     @"CALayer 绘制图片图层"];
     
     [self.view addSubview:self.tableView];
 }

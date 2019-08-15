@@ -7,9 +7,10 @@
 //
 
 #import "BTSBaseViewController.h"
+#import "Const.h"
 
 @interface CATransitionViewController : BTSBaseViewController
 
-@property (nonatomic, assign) NSInteger type;
+@property (nonatomic, assign) TransitionAnimationType type;
 
 @end
