@@ -73,15 +73,18 @@
         } else if (3 == indexPath.row) {
             text = @"CAAnimation 注意点";
         }
+        
     } else if (1 == indexPath.section) {
         text = @"CATransition (转场动画)";
+        
     } else if (2 == indexPath.section) {
         text = @"CAAnimationGroup (组动画)";
+        
     } else {
         text = @"其他";
     }
-    cell.textLabel.text = text;
     
+    cell.textLabel.text = text;
     return cell;
 }
 
@@ -162,7 +165,6 @@
         _tableView = [[UITableView alloc] initWithFrame:CGRectMake(0, 0, WIDTH, HEIGHT) style:UITableViewStyleGrouped];
         _tableView.delegate = self;
         _tableView.dataSource = self;
-        
         [_tableView registerClass:[UITableViewCell class] forCellReuseIdentifier:@"CellIdentifier"];
     }
     return _tableView;

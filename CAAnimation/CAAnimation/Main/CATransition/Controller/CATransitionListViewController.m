@@ -23,6 +23,8 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     
+    self.dataArr = @[@"转场动画"];
+    
     [self.view addSubview:self.tableView];
 }
 
@@ -58,7 +60,6 @@
         _tableView.delegate = self;
         _tableView.dataSource = self;
         _tableView.tableFooterView = [[UIView alloc] initWithFrame:CGRectZero];
-        
         [_tableView registerClass:[UITableViewCell class] forCellReuseIdentifier:@"CellIdentifier"];
     }
     return _tableView;
@@ -66,7 +67,7 @@
 
 - (NSArray *)dataArr {
     if (!_dataArr) {
-        _dataArr = @[@"转场动画"];
+        _dataArr = [NSArray array];
     }
     return _dataArr;
 }

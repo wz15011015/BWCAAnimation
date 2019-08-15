@@ -66,7 +66,7 @@
 
 @synthesize persistentContainer = _persistentContainer;
 
-- (NSPersistentContainer *)persistentContainer {
+- (NSPersistentContainer *)persistentContainer  API_AVAILABLE(ios(10.0)){
     // The persistent container for the application. This implementation creates and returns a container, having loaded the store for the application to it.
     @synchronized (self) {
         if (_persistentContainer == nil) {

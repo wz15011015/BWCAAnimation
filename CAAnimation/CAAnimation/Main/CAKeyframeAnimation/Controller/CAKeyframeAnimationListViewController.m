@@ -24,6 +24,10 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     
+    self.dataArr = @[@"弹出视图动画",
+                     @"椭圆路径动画",
+                     @"Beautiful Scene"];
+    
     [self.view addSubview:self.tableView];
 }
 
@@ -65,7 +69,6 @@
         _tableView.delegate = self;
         _tableView.dataSource = self;
         _tableView.tableFooterView = [[UIView alloc] initWithFrame:CGRectZero];
-        
         [_tableView registerClass:[UITableViewCell class] forCellReuseIdentifier:@"CellIdentifier"];
     }
     return _tableView;
@@ -73,9 +76,7 @@
 
 - (NSArray *)dataArr {
     if (!_dataArr) {
-        _dataArr = @[@"弹出视图动画",
-                     @"椭圆路径动画",
-                     @"Beautiful Scene"];
+        _dataArr = [NSArray array];
     }
     return _dataArr;
 }

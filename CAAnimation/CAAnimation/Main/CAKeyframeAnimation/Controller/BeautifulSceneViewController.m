@@ -167,8 +167,8 @@
 #pragma mark - Touch
 
 - (void)touchesBegan:(NSSet<UITouch *> *)touches withEvent:(UIEvent *)event {
-    UITouch *touch = [touches anyObject];
-    CGPoint touchPoint = [touch locationInView:self.view];
+//    UITouch *touch = [touches anyObject];
+//    CGPoint touchPoint = [touch locationInView:self.view];
     
     // 判断动画是否已经创建,若已创建则不再创建
 //    CAAnimation *animation = [self.petalLayer animationForKey:@"petal_pan_animation"];

@@ -23,6 +23,26 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     
+    self.dataArr = @[@"transform.scale (比例缩放)",
+                     @"transform.scale.x (宽度比例缩放)",
+                     @"transform.scale.y (高度比例缩放)",
+                     @"transform.rotation.x (绕x轴旋转)",
+                     @"transform.rotation.y (绕y轴旋转)",
+                     @"transform.rotation.z (绕z轴旋转)",
+                     @"transform.translation (中心点移动)",
+                     @"transform.translation.x (x轴方向上移动)",
+                     @"transform.translation.y (y轴方向上移动)",
+                     @"contentsRect.size.width (横向拉伸缩放)",
+                     @"contentsRect.size.height (纵向拉伸缩放)",
+                     @"bounds (大小缩放,中心位置不变)",
+                     @"position (中心位置变化,大小不变)",
+                     @"backgroundColor (背景颜色的变化)",
+                     @"opacity (透明度变化)",
+                     @"contents (内容变化,比如UIImageView的图片)",
+                     @"cornerRadius (圆角变化)",
+                     @"borderWidth (边框线宽度变化)",
+                     @"borderColor (边框线颜色变化)"];
+    
     [self.view addSubview:self.tableView];
 }
 
@@ -99,7 +119,6 @@
         _tableView.delegate = self;
         _tableView.dataSource = self;
         _tableView.tableFooterView = [[UIView alloc] initWithFrame:CGRectZero];
-        
         [_tableView registerClass:[UITableViewCell class] forCellReuseIdentifier:@"CellIdentifier"];
     }
     return _tableView;
@@ -107,25 +126,7 @@
 
 - (NSArray *)dataArr {
     if (!_dataArr) {
-        _dataArr = @[@"transform.scale (比例缩放)",
-                     @"transform.scale.x (宽度比例缩放)",
-                     @"transform.scale.y (高度比例缩放)",
-                     @"transform.rotation.x (绕x轴旋转)",
-                     @"transform.rotation.y (绕y轴旋转)",
-                     @"transform.rotation.z (绕z轴旋转)",
-                     @"transform.translation (中心点移动)",
-                     @"transform.translation.x (x轴方向上移动)",
-                     @"transform.translation.y (y轴方向上移动)",
-                     @"contentsRect.size.width (横向拉伸缩放)",
-                     @"contentsRect.size.height (纵向拉伸缩放)",
-                     @"bounds (大小缩放,中心位置不变)",
-                     @"position (中心位置变化,大小不变)",
-                     @"backgroundColor (背景颜色的变化)",
-                     @"opacity (透明度变化)",
-                     @"contents (内容变化,比如UIImageView的图片)",
-                     @"cornerRadius (圆角变化)",
-                     @"borderWidth (边框线宽度变化)",
-                     @"borderColor (边框线颜色变化)"];
+        _dataArr = [NSArray array];
     }
     return _dataArr;
 }

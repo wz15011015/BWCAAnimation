@@ -10,7 +10,6 @@
 #import "Macro.h"
 
 #define TOUCH_POINT_W (30)
-
 #define IMAGE_LAYER_W (100)
 
 

@@ -61,11 +61,12 @@
 
 - (UIButton *)startAnimationButton {
     if (!_startAnimationButton) {
-        _startAnimationButton = [UIButton buttonWithType:UIButtonTypeSystem];
         CGFloat w = 200;
+        CGFloat h = 44;
         CGFloat x = (WIDTH - w) / 2.0;
-        CGFloat y = HEIGHT - 44 - 44;
-        _startAnimationButton.frame = CGRectMake(x, y, w, 44);
+        CGFloat y = HEIGHT - h - h;
+        _startAnimationButton = [UIButton buttonWithType:UIButtonTypeSystem];
+        _startAnimationButton.frame = CGRectMake(x, y, w, h);
         [_startAnimationButton setTitle:@"Start Animation" forState:UIControlStateNormal];
         [_startAnimationButton addTarget:self action:@selector(showAnimation) forControlEvents:UIControlEventTouchUpInside];
     }
