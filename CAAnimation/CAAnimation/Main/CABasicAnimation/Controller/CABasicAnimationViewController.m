@@ -343,6 +343,55 @@
     [self.animationImageView.layer addAnimation:animation forKey:nil];
 }
 
+- (void)animationStrokeStart {
+    CABasicAnimation *animation = [CABasicAnimation animationWithKeyPath:@"strokeStart"];
+    animation.delegate = self;
+    animation.duration = 2.0;
+    animation.timingFunction = [CAMediaTimingFunction functionWithName:kCAMediaTimingFunctionEaseInEaseOut];
+    animation.removedOnCompletion = NO;
+    animation.fillMode = kCAFillModeForwards;
+    animation.fromValue = @0;
+    animation.toValue = @0.8;
+    
+    CAShapeLayer *animationLayer = [CAShapeLayer layer];
+    animationLayer.strokeColor = [UIColor orangeColor].CGColor;
+    animationLayer.lineWidth = 24;
+    // 设置路径
+    UIBezierPath *path = [UIBezierPath bezierPath];
+    [path moveToPoint:CGPointMake(0, 50)];
+    [path addLineToPoint:CGPointMake(100, 50)];
+    animationLayer.path = path.CGPath;
+    
+    [animationLayer addAnimation:animation forKey:nil];
+    
+    [self.animationImageView.layer addSublayer:animationLayer];
+}
+
+- (void)animationStrokeEnd {
+    CABasicAnimation *animation = [CABasicAnimation animationWithKeyPath:@"strokeEnd"];
+    animation.delegate = self;
+    animation.duration = 2.0;
+    animation.timingFunction = [CAMediaTimingFunction functionWithName:kCAMediaTimingFunctionEaseInEaseOut];
+    animation.autoreverses = YES;
+    animation.removedOnCompletion = NO;
+    animation.fillMode = kCAFillModeForwards;
+    animation.fromValue = @0;
+    animation.toValue = @0.8;
+    
+    CAShapeLayer *animationLayer = [CAShapeLayer layer];
+    animationLayer.strokeColor = [UIColor orangeColor].CGColor;
+    animationLayer.lineWidth = 24;
+    // 设置路径
+    UIBezierPath *path = [UIBezierPath bezierPath];
+    [path moveToPoint:CGPointMake(0, 50)];
+    [path addLineToPoint:CGPointMake(100, 50)];
+    animationLayer.path = path.CGPath;
+    
+    [animationLayer addAnimation:animation forKey:nil];
+    
+    [self.animationImageView.layer addSublayer:animationLayer];
+}
+
 
 #pragma mark - CAAnimationDelegate
 
@@ -445,6 +494,10 @@
         [self animationBorderWidth];
     } else if (self.animationType == AnimationKeyPathBorderColor) {
         [self animationBorderColor];
+    } else if (self.animationType == AnimationKeyPathStrokeStart) {
+        [self animationStrokeStart];
+    } else if (self.animationType == AnimationKeyPathStrokeEnd) {
+        [self animationStrokeEnd];
     }
 }
 

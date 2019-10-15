@@ -41,7 +41,9 @@
                      @"contents (内容变化,比如UIImageView的图片)",
                      @"cornerRadius (圆角变化)",
                      @"borderWidth (边框线宽度变化)",
-                     @"borderColor (边框线颜色变化)"];
+                     @"borderColor (边框线颜色变化)",
+                     @"strokeStart (CAShapeLayer的属性: 画笔开始)",
+                     @"strokeEnd (CAShapeLayer的属性: 画笔结束)"];
     
     [self.view addSubview:self.tableView];
 }
@@ -104,6 +106,10 @@
         type = AnimationKeyPathBorderWidth;
     } else if (18 == indexPath.row) {
         type = AnimationKeyPathBorderColor;
+    } else if (19 == indexPath.row) {
+        type = AnimationKeyPathStrokeStart;
+    } else if (20 == indexPath.row) {
+        type = AnimationKeyPathStrokeEnd;
     }
     
     CABasicAnimationViewController *vc = [[CABasicAnimationViewController alloc] init];

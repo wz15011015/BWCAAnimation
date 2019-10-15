@@ -31,6 +31,8 @@
  - AnimationKeyPathCornerRadius: 圆角变化
  - AnimationKeyPathBorderWidth: 边框线宽度变化
  - AnimationKeyPathBorderColor: 边框线颜色变化
+ - AnimationKeyPathStrokeStart: CAShapeLayer的属性: 画笔开始
+ - AnimationKeyPathStrokeEnd: CAShapeLayer的属性: 画笔结束
  */
 typedef NS_ENUM(NSUInteger, AnimationKeyPath) {
     AnimationKeyPathTransformScale,
@@ -52,6 +54,8 @@ typedef NS_ENUM(NSUInteger, AnimationKeyPath) {
     AnimationKeyPathCornerRadius,
     AnimationKeyPathBorderWidth,
     AnimationKeyPathBorderColor,
+    AnimationKeyPathStrokeStart,
+    AnimationKeyPathStrokeEnd,
 };
 
 
