@@ -20,6 +20,9 @@
 
 @property (nonatomic, strong) UITableView *tableView;
 
+@property (nonatomic, strong) NSArray *sectionTitles;
+@property (nonatomic, strong) NSArray *sectionOneTitles;
+
 @end
 
 @implementation CAAnimationViewController
@@ -36,7 +39,21 @@
     
     self.navigationItem.title = @"CAAnimation";
     
+    [self initData];
+    
     [self.view addSubview:self.tableView];
+}
+
+- (void)initData {
+    self.sectionTitles = @[@"CAPropertyAnimation (属性动画)",
+                           @"CATransition (转场动画)",
+                           @"CAAnimationGroup (组动画)",
+                           @"其他"];
+    
+    self.sectionOneTitles = @[@"CABasicAnimation (基础动画)",
+                              @"CAKeyframeAnimation (关键帧动画)",
+                              @"CASpringAnimation (弹性动画)",
+                              @"CAAnimation 注意点"];
 }
 
 
@@ -48,7 +65,7 @@
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
     if (0 == section) {
-        return 4;
+        return self.sectionOneTitles.count;
     } else if (1 == section) {
         return 1;
     } else if (2 == section) {
@@ -64,39 +81,26 @@
     
     NSString *text = @"";
     if (0 == indexPath.section) {
-        if (0 == indexPath.row) {
-            text = @"CABasicAnimation (基础动画)";
-        } else if (1 == indexPath.row) {
-            text = @"CAKeyframeAnimation (关键帧动画)";
-        } else if (2 == indexPath.row) {
-            text = @"CASpringAnimation (弹性动画)";
-        } else if (3 == indexPath.row) {
-            text = @"CAAnimation 注意点";
+        if (indexPath.row < self.sectionOneTitles.count) {
+            text = self.sectionOneTitles[indexPath.row];
         }
-        
     } else if (1 == indexPath.section) {
         text = @"CATransition (转场动画)";
-        
     } else if (2 == indexPath.section) {
         text = @"CAAnimationGroup (组动画)";
-        
     } else {
         text = @"其他";
     }
-    
     cell.textLabel.text = text;
+    
     return cell;
 }
 
 - (NSString *)tableView:(UITableView *)tableView titleForHeaderInSection:(NSInteger)section {
-    if (0 == section) {
-        return @"CAPropertyAnimation (属性动画)";
-    } else if (1 == section) {
-        return @"CATransition (转场动画)";
-    } else if (2 == section) {
-        return @"CAAnimationGroup (组动画)";
+    if (section < self.sectionTitles.count) {
+        return self.sectionTitles[section];
     } else {
-        return @"其他";
+        return @"";
     }
 }
 
@@ -112,26 +116,26 @@
     
     NSString *title = @"";
     if (0 == indexPath.section) {
+        if (indexPath.row < self.sectionOneTitles.count) {
+            title = self.sectionOneTitles[indexPath.row];
+        }
+        
         if (0 == indexPath.row) {
-            title = @"CABasicAnimation (基础动画)";
             CABasicAnimationListViewController *vc = [[CABasicAnimationListViewController alloc] init];
             vc.title = title;
             [self.navigationController pushViewController:vc animated:YES];
             
         } else if (1 == indexPath.row) {
-            title = @"CAKeyframeAnimation (关键帧动画)";
             CAKeyframeAnimationListViewController *vc = [[CAKeyframeAnimationListViewController alloc] init];
             vc.title = title;
             [self.navigationController pushViewController:vc animated:YES];
             
         } else if (2 == indexPath.row) {
-            title = @"CASpringAnimation (弹性动画)";
             CASpringAnimationListViewController *vc = [[CASpringAnimationListViewController alloc] init];
             vc.title = title;
             [self.navigationController pushViewController:vc animated:YES];
             
         }  else if (3 == indexPath.row) {
-            title = @"CAAnimation 注意点";
             CAAnimationHintViewController * vc = [[CAAnimationHintViewController alloc] init];
             vc.title = title;
             [self.navigationController pushViewController:vc animated:YES];

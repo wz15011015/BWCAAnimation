@@ -98,7 +98,7 @@
     aniGroup.animations = @[ positionAnimation, scaleAnimation, backgroundColorAnimation ];
     
     // 3. 添加动画组到图层
-    [self.animationImageView.layer addAnimation:aniGroup forKey:@"AnimationGroup1Key"];
+    [self.animationImageView.layer addAnimation:aniGroup forKey:@"AnimationGroup1"];
 }
 
 /**
@@ -232,6 +232,8 @@
     
     NSString *animationKey = [anim valueForKey:@"AnimationKey"];
     if ([animationKey isEqualToString:@"AnimationGroup"]) {
+        self.startAnimationButton.enabled = YES;
+        
         if (flag) {
             NSLog(@"组动画正常结束了");
         } else {
@@ -246,6 +248,8 @@
         [self handClickResponseAnimation];
         
     } else if ([animationKey isEqualToString:@"AnimationHandOut"]) {
+        self.startAnimationButton.enabled = YES;
+        
         // 当手的所有动画结束后,从其图层中移除所有动画,以释放动画的delegate对象
         [self.handImageView.layer removeAllAnimations];
     }
@@ -256,6 +260,8 @@
 
 - (void)showAnimation {
     [super showAnimation];
+    
+    self.startAnimationButton.enabled = NO;
     
     if (self.animationType == 1) {
         [self animationGroup1];

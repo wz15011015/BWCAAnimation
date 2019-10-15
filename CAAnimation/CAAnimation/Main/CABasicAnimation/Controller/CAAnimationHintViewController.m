@@ -26,7 +26,14 @@
     
     [self setupUI];
     
-    self.hintLabel1.text = [NSString stringWithFormat:@"动画开始前,动画视图的frame:  %@", NSStringFromCGRect(self.animationImageView.frame)];
+    // 注意核心动画有个缺点:
+    // Core Animation是直接作用在CALayer上的,并非UIView上.
+    //
+    // 你所看到的view的变化都是假象，实际上view的属性根本没有发生改变,这就对实际开发造成了不必要的麻烦。
+    // 如: view上有几个按钮，在旋转时你想要点击的按钮(你看到view旋转，以为frame改变了)和view响应的
+    // 按钮(实际上view.frame没变)可能就不是同一个。所以,这时尽量不用核心动画，可以用UIView封装的动画
+    // 来实现类似的效果。
+    self.hintLabel1.text = [NSString stringWithFormat:@"动画开始前,视图的frame: %@", NSStringFromCGRect(self.animationImageView.frame)];
 }
 
 - (void)viewDidDisappear:(BOOL)animated {
@@ -71,24 +78,17 @@
 #pragma mark - CAAnimationDelegate
 
 - (void)animationDidStart:(CAAnimation *)anim {
-    // 注意核心动画有个缺点:
-    // Core Animation是直接作用在CALayer上的,并非UIView.
-    //
-    // 你所看到的view的变化都是假象，实际上view的属性根本没有发生改变,这就对实际开发造成不必要的麻烦。
-    // 如:view上有几个按钮，在旋转时你想要点击的按钮(你看到view旋转，以为frame改变了)
-    // 和view响应的按钮(实际上view.frame没变)可能就不是同一个。
-    // 所以,这时尽量不用核心动画，可以用UIView封装的动画来实现类似的效果。
-    
     NSLog(@"transfrom.scale.x 动画开始了");
 }
 
 - (void)animationDidStop:(CAAnimation *)anim finished:(BOOL)flag {
+    self.hintLabel2.text = [NSString stringWithFormat:@"动画结束时,视图的frame: %@", NSStringFromCGRect(self.animationImageView.frame)];
+    
     if (flag) {
         NSLog(@"transfrom.scale.x 动画正常结束了");
     } else {
         NSLog(@"transfrom.scale.x 动画被打断结束了");
     }
-    self.hintLabel2.text = [NSString stringWithFormat:@"动画结束时,动画视图的frame:  %@", NSStringFromCGRect(self.animationImageView.frame)];
 }
 
 
@@ -96,6 +96,8 @@
 
 - (void)showAnimation {
     [super showAnimation];
+    
+    self.startAnimationButton.enabled = NO;
     
     [self animationTransformScaleX];
 }

@@ -32,8 +32,8 @@
                      @"transform.translation (中心点移动)",
                      @"transform.translation.x (x轴方向上移动)",
                      @"transform.translation.y (y轴方向上移动)",
-                     @"contentsRect.size.width (横向拉伸缩放)",
-                     @"contentsRect.size.height (纵向拉伸缩放)",
+                     @"contentsRect.size.width (横向拉伸缩放) (已无效)",
+                     @"contentsRect.size.height (纵向拉伸缩放) (已无效)",
                      @"bounds (大小缩放,中心位置不变)",
                      @"position (中心位置变化,大小不变)",
                      @"backgroundColor (背景颜色的变化)",
@@ -55,6 +55,8 @@
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
     UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"CellIdentifier" forIndexPath:indexPath];
+    cell.textLabel.adjustsFontSizeToFitWidth = YES;
+    cell.textLabel.minimumScaleFactor = 0.5;
     cell.textLabel.text = self.dataArr[indexPath.row];
     cell.accessoryType = UITableViewCellAccessoryDisclosureIndicator;
     return cell;

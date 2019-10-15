@@ -22,8 +22,8 @@
     [super viewDidLoad];
     
     /**
-           Core Animation是直接作用在CALayer上的,并非UIView.
-          */
+     Core Animation是直接作用在CALayer上的,并非UIView.
+     */
     
     [self setupUI];
     
@@ -55,12 +55,12 @@
 
 - (void)animationTransformScale {
     CASpringAnimation *animation = [CASpringAnimation animationWithKeyPath:@"transform.scale"];
+    animation.delegate = self;
     animation.duration = 0.5;
     animation.repeatCount = 4;
     animation.autoreverses = YES;
     animation.fromValue = [NSNumber numberWithFloat:1.0];
     animation.toValue = [NSNumber numberWithFloat:1.4];
-    animation.delegate = self;
     
     // 弹性动画特有属性:
     
@@ -82,37 +82,40 @@
     // 估算时间, 弹簧动画开始到停止时的时间,根据当前的动画参数进行估算.
     NSLog(@"settlingDuration = %f", animation.settlingDuration);
     
+    [animation setValue:@"TransformScaleKey" forKey:@"AnimationKey"];
     
-    [animation setValue:@"TransformScale" forKey:@"AnimationKey"];
     [self.animationImageView.layer addAnimation:animation forKey:@"TransformScale"];
 }
 
 - (void)animationTransformScaleX {
     CASpringAnimation *animation = [CASpringAnimation animationWithKeyPath:@"transform.scale.x"];
+    animation.delegate = self;
     animation.duration = 1.0;
     animation.timingFunction = [CAMediaTimingFunction functionWithName:kCAMediaTimingFunctionEaseInEaseOut];
     animation.autoreverses = YES;
     animation.fromValue = [NSNumber numberWithFloat:1.0];
     animation.toValue = [NSNumber numberWithFloat:1.8];
-    animation.delegate = self;
-    [animation setValue:@"TransformScaleX" forKey:@"AnimationKey"];
+    [animation setValue:@"TransformScaleXKey" forKey:@"AnimationKey"];
     
     [self.animationImageView.layer addAnimation:animation forKey:@"TransformScaleX"];
 }
 
 - (void)animationTransformScaleY {
     CASpringAnimation *animation = [CASpringAnimation animationWithKeyPath:@"transform.scale.y"];
+    animation.delegate = self;
     animation.duration = 1.0;
     animation.timingFunction = [CAMediaTimingFunction functionWithName:kCAMediaTimingFunctionEaseInEaseOut];
     animation.autoreverses = YES;
     animation.fromValue = [NSNumber numberWithFloat:1.0];
     animation.toValue = [NSNumber numberWithFloat:1.4];
+    [animation setValue:@"TransformScaleYKey" forKey:@"AnimationKey"];
     
-    [self.animationImageView.layer addAnimation:animation forKey:nil];
+    [self.animationImageView.layer addAnimation:animation forKey:@"TransformScaleY"];
 }
 
 - (void)animationTransformRotationX {
     CASpringAnimation *animation = [CASpringAnimation animationWithKeyPath:@"transform.rotation.x"];
+    animation.delegate = self;
     animation.duration = 1.5;
     animation.timingFunction = [CAMediaTimingFunction functionWithName:kCAMediaTimingFunctionEaseInEaseOut];
     animation.autoreverses = YES;
@@ -124,6 +127,7 @@
 
 - (void)animationTransformRotationY {
     CASpringAnimation *animation = [CASpringAnimation animationWithKeyPath:@"transform.rotation.y"];
+    animation.delegate = self;
     animation.duration = 1.5;
     animation.timingFunction = [CAMediaTimingFunction functionWithName:kCAMediaTimingFunctionEaseInEaseOut];
     animation.autoreverses = YES;
@@ -135,6 +139,7 @@
 
 - (void)animationTransformRotationZ {
     CASpringAnimation *animation = [CASpringAnimation animationWithKeyPath:@"transform.rotation.z"];
+    animation.delegate = self;
     animation.duration = 1.0;
     animation.timingFunction = [CAMediaTimingFunction functionWithName:kCAMediaTimingFunctionEaseInEaseOut];
     animation.autoreverses = YES;
@@ -146,6 +151,7 @@
 
 - (void)animationTransformTranslation {
     CASpringAnimation *animation = [CASpringAnimation animationWithKeyPath:@"transform.translation"];
+    animation.delegate = self;
     animation.duration = 1.0;
     animation.timingFunction = [CAMediaTimingFunction functionWithName:kCAMediaTimingFunctionEaseInEaseOut];
     animation.autoreverses = YES;
@@ -157,6 +163,7 @@
 
 - (void)animationTransformTranslationX {
     CASpringAnimation *animation = [CASpringAnimation animationWithKeyPath:@"transform.translation.x"];
+    animation.delegate = self;
     animation.duration = 1.0;
     animation.timingFunction = [CAMediaTimingFunction functionWithName:kCAMediaTimingFunctionEaseInEaseOut];
     animation.autoreverses = YES;
@@ -168,6 +175,7 @@
 
 - (void)animationTransformTranslationY {
     CASpringAnimation *animation = [CASpringAnimation animationWithKeyPath:@"transform.translation.y"];
+    animation.delegate = self;
     animation.duration = 1.0;
     animation.timingFunction = [CAMediaTimingFunction functionWithName:kCAMediaTimingFunctionEaseInEaseOut];
     animation.autoreverses = YES;
@@ -179,6 +187,7 @@
 
 - (void)animationContentsRectSizeWidth {
     CASpringAnimation *animation = [CASpringAnimation animationWithKeyPath:@"contentsRect.size.width"];
+    animation.delegate = self;
     animation.duration = 1.0;
     animation.timingFunction = [CAMediaTimingFunction functionWithName:kCAMediaTimingFunctionEaseInEaseOut];
     animation.autoreverses = YES;
@@ -190,6 +199,7 @@
 
 - (void)animationContentsRectSizeHeight {
     CASpringAnimation *animation = [CASpringAnimation animationWithKeyPath:@"contentsRect.size.height"];
+    animation.delegate = self;
     animation.duration = 1.0;
     animation.timingFunction = [CAMediaTimingFunction functionWithName:kCAMediaTimingFunctionEaseInEaseOut];
     animation.autoreverses = YES;
@@ -201,6 +211,7 @@
 
 - (void)animationBounds {
     CASpringAnimation *animation = [CASpringAnimation animationWithKeyPath:@"bounds"];
+    animation.delegate = self;
     animation.duration = 1.0;
     animation.timingFunction = [CAMediaTimingFunction functionWithName:kCAMediaTimingFunctionEaseInEaseOut];
     animation.autoreverses = YES;
@@ -215,6 +226,7 @@
     CGFloat centerY = CGRectGetMidY(self.animationImageView.frame);
     
     CASpringAnimation *animation = [CASpringAnimation animationWithKeyPath:@"position"];
+    animation.delegate = self;
     animation.duration = 1.0;
     animation.timingFunction = [CAMediaTimingFunction functionWithName:kCAMediaTimingFunctionEaseInEaseOut];
     animation.autoreverses = YES;
@@ -226,6 +238,7 @@
 
 - (void)animationBackgroundColor {
     CASpringAnimation *animation = [CASpringAnimation animationWithKeyPath:@"backgroundColor"];
+    animation.delegate = self;
     animation.duration = 1.0;
     animation.timingFunction = [CAMediaTimingFunction functionWithName:kCAMediaTimingFunctionLinear];
     animation.autoreverses = YES;
@@ -237,6 +250,7 @@
 
 - (void)animationOpacity {
     CASpringAnimation *animation = [CASpringAnimation animationWithKeyPath:@"opacity"];
+    animation.delegate = self;
     animation.duration = 1.0;
     animation.timingFunction = [CAMediaTimingFunction functionWithName:kCAMediaTimingFunctionEaseInEaseOut];
     animation.autoreverses = YES;
@@ -248,6 +262,7 @@
 
 - (void)animationContents {
     CASpringAnimation *animation = [CASpringAnimation animationWithKeyPath:@"contents"];
+    animation.delegate = self;
     animation.duration = 1.0;
     animation.timingFunction = [CAMediaTimingFunction functionWithName:kCAMediaTimingFunctionEaseInEaseOut];
     animation.autoreverses = YES;
@@ -259,6 +274,7 @@
 
 - (void)animationCornerRadius {
     CASpringAnimation *animation = [CASpringAnimation animationWithKeyPath:@"cornerRadius"];
+    animation.delegate = self;
     animation.duration = 1.0;
     animation.timingFunction = [CAMediaTimingFunction functionWithName:kCAMediaTimingFunctionEaseInEaseOut];
     animation.autoreverses = YES;
@@ -270,6 +286,7 @@
 
 - (void)animationBorderWidth {
     CASpringAnimation *animation = [CASpringAnimation animationWithKeyPath:@"borderWidth"];
+    animation.delegate = self;
     animation.duration = 1.0;
     animation.timingFunction = [CAMediaTimingFunction functionWithName:kCAMediaTimingFunctionEaseInEaseOut];
     animation.autoreverses = YES;
@@ -281,6 +298,7 @@
 
 - (void)animationBorderColor {
     CASpringAnimation *animation = [CASpringAnimation animationWithKeyPath:@"borderColor"];
+    animation.delegate = self;
     animation.duration = 1.0;
     animation.timingFunction = [CAMediaTimingFunction functionWithName:kCAMediaTimingFunctionEaseInEaseOut];
     animation.autoreverses = YES;
@@ -294,40 +312,53 @@
 #pragma mark - CAAnimationDelegate
 
 - (void)animationDidStart:(CAAnimation *)anim {
-    // Note:把动画存储为一个属性然后再回调中比较，用来判定是哪个动画的方法
-    // 是不可行的,因为委托传入的动画参数是原始值的一个深拷贝，不是同一个值.
+    // 注意:
+    // 把动画存储为一个属性,然后在代理方法中通过比较来判定是哪个动画的方法是不可行的.
+    // 因为执行方法addAnimation:forKey:实际上是将CABasicAniamtion对象进行了
+    // copy(深拷贝)操作的,所以代理方法中传回来的动画参数 anim 是原始值的一个深拷贝，不是同一个值.
     
+    // 区分不同动画的方法
     NSString *animationTypeStr = @"";
-    // 区分不同的动画
     CAAnimation *transformScaleAnim = [self.animationImageView.layer animationForKey:@"TransformScale"];
-    CAAnimation *transformScaleYAnim = [self.animationImageView.layer animationForKey:@"TransformScaleX"];
-    
+    CAAnimation *transformScaleXAnim = [self.animationImageView.layer animationForKey:@"TransformScaleX"];
+    CAAnimation *transformScaleYAnim = [self.animationImageView.layer animationForKey:@"TransformScaleY"];
     if ([anim isEqual:transformScaleAnim]) {
         animationTypeStr = @"transfrom.scale";
-    } else if ([anim isEqual:transformScaleYAnim]) {
+    } else if ([anim isEqual:transformScaleXAnim]) {
         animationTypeStr = @"transfrom.scale.x";
+    } else if ([anim isEqual:transformScaleYAnim]) {
+        animationTypeStr = @"transfrom.scale.y";
     }
-    NSLog(@"%@ 弹性动画开始了", animationTypeStr);
+    if (![animationTypeStr isEqualToString:@""]) {
+        NSLog(@"%@ 弹性动画开始了", animationTypeStr);
+    }
 }
 
 - (void)animationDidStop:(CAAnimation *)anim finished:(BOOL)flag {
-    // flag参数表明了动画是自然结束还是被打断的,比如调用了removeAnimationForKey:方法
-    // 或removeAnimationForKey方法，flag为NO，如果是正常结束，flag为YES。
+    self.startAnimationButton.enabled = YES;
     
-    // 此时,不能再使用[self.animationImageView.layer animationForKey:@"TransformScale"]来区分不同的动画了,
-    // 因为动画完成时已经把CAAnimation从layer上移除了,所以[ animationForKey:]方法获取到的CAAnimation会一直为nil,不能用于判断.
+    // flag参数表明了动画是自然结束还是被打断的,比如调用了removeAnimationForKey:方法
+    // 或removeAnimationForKey方法，则flag为NO; 如果是正常结束的，则flag为YES。
+    
+    // 此时,不能再使用[self.animationImageView.layer animationForKey:@"TransformScale"]
+    // 来区分不同的动画了,因为动画完成时已经把CAAnimation从layer上移除了,所以animationForKey:
+    // 方法获取到的CAAnimation会一直为nil,不能用于判断.
     
     NSString *animationTypeStr = @"";
     NSString *animationKey = [anim valueForKey:@"AnimationKey"];
-    if ([animationKey isEqualToString:@"TransformScale"]) {
+    if ([animationKey isEqualToString:@"TransformScaleKey"]) {
         animationTypeStr = @"transfrom.scale";
-    } else if ([animationKey isEqualToString:@"TransformScaleX"]) {
+    } else if ([animationKey isEqualToString:@"TransformScaleXKey"]) {
         animationTypeStr = @"transfrom.scale.x";
+    } else if ([animationKey isEqualToString:@"TransformScaleYKey"]) {
+        animationTypeStr = @"transfrom.scale.y";
     }
-    if (flag) {
-        NSLog(@"%@ 弹性动画正常结束了", animationTypeStr);
-    } else {
-        NSLog(@"%@ 弹性动画被打断结束了", animationTypeStr);
+    if (![animationTypeStr isEqualToString:@""]) {
+        if (flag) {
+            NSLog(@"%@ 弹性动画正常结束了", animationTypeStr);
+        } else {
+            NSLog(@"%@ 弹性动画被打断结束了", animationTypeStr);
+        }
     }
 }
 
@@ -336,6 +367,8 @@
 
 - (void)showAnimation {
     [super showAnimation];
+    
+    self.startAnimationButton.enabled = NO;
     
     if (self.animationType == AnimationKeyPathTransformScale) {
         [self animationTransformScale];
