@@ -24,7 +24,6 @@
 		84C9E5F02047C8FB00C19B8A /* OtherViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 84C9E5EF2047C8FB00C19B8A /* OtherViewController.m */; };
 		84CBC1E920457EB500B1EBC0 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 84CBC1E820457EB500B1EBC0 /* AppDelegate.m */; };
 		84CBC1EF20457EB500B1EBC0 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 84CBC1ED20457EB500B1EBC0 /* Main.storyboard */; };
-		84CBC1F220457EB500B1EBC0 /* CAAnimation.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 84CBC1F020457EB500B1EBC0 /* CAAnimation.xcdatamodeld */; };
 		84CBC1F420457EB500B1EBC0 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 84CBC1F320457EB500B1EBC0 /* Assets.xcassets */; };
 		84CBC1F720457EB500B1EBC0 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 84CBC1F520457EB500B1EBC0 /* LaunchScreen.storyboard */; };
 		84CBC1FA20457EB500B1EBC0 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 84CBC1F920457EB500B1EBC0 /* main.m */; };
@@ -87,7 +86,6 @@
 		84CBC1E720457EB400B1EBC0 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		84CBC1E820457EB500B1EBC0 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
 		84CBC1EE20457EB500B1EBC0 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
-		84CBC1F120457EB500B1EBC0 /* CAAnimation.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = CAAnimation.xcdatamodel; sourceTree = "<group>"; };
 		84CBC1F320457EB500B1EBC0 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		84CBC1F620457EB500B1EBC0 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		84CBC1F820457EB500B1EBC0 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -262,7 +260,6 @@
 				84CBC1F520457EB500B1EBC0 /* LaunchScreen.storyboard */,
 				84CBC1F820457EB500B1EBC0 /* Info.plist */,
 				84CBC1F920457EB500B1EBC0 /* main.m */,
-				84CBC1F020457EB500B1EBC0 /* CAAnimation.xcdatamodeld */,
 			);
 			path = CAAnimation;
 			sourceTree = "<group>";
@@ -502,7 +499,6 @@
 				061E801422FD4704003C9559 /* CAAnimationHintViewController.m in Sources */,
 				061E800A22FD13B5003C9559 /* CAAnimationGroupListViewController.m in Sources */,
 				061E7FFD22FD0903003C9559 /* CASpringAnimationViewController.m in Sources */,
-				84CBC1F220457EB500B1EBC0 /* CAAnimation.xcdatamodeld in Sources */,
 				84CBC22A2045848400B1EBC0 /* BTSNavigationController.m in Sources */,
 				847BC042204CEF8100D85C17 /* BeautifulSceneViewController.m in Sources */,
 				84CBC1FA20457EB500B1EBC0 /* main.m in Sources */,
@@ -806,19 +802,6 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
-
-/* Begin XCVersionGroup section */
-		84CBC1F020457EB500B1EBC0 /* CAAnimation.xcdatamodeld */ = {
-			isa = XCVersionGroup;
-			children = (
-				84CBC1F120457EB500B1EBC0 /* CAAnimation.xcdatamodel */,
-			);
-			currentVersion = 84CBC1F120457EB500B1EBC0 /* CAAnimation.xcdatamodel */;
-			path = CAAnimation.xcdatamodeld;
-			sourceTree = "<group>";
-			versionGroupType = wrapper.xcdatamodel;
-		};
-/* End XCVersionGroup section */
 	};
 	rootObject = 84CBC1DC20457EB400B1EBC0 /* Project object */;
 }

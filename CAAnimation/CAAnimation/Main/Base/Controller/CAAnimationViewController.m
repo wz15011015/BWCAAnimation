@@ -106,7 +106,7 @@
 
 - (NSString *)tableView:(UITableView *)tableView titleForFooterInSection:(NSInteger)section {
     if (0 == section) {
-        return @"Tips: iOS 9.0之后新增CASpringAnimation类，它实现弹簧效果的动画，是CABasicAnimation的子类.";
+        return @"Tips：iOS 9.0之后新增的CASpringAnimation类，它是实现弹簧效果的动画，是CABasicAnimation的子类。";
     }
     return @"";
 }

@@ -33,7 +33,8 @@
     // 如: view上有几个按钮，在旋转时你想要点击的按钮(你看到view旋转，以为frame改变了)和view响应的
     // 按钮(实际上view.frame没变)可能就不是同一个。所以,这时尽量不用核心动画，可以用UIView封装的动画
     // 来实现类似的效果。
-    self.hintLabel1.text = [NSString stringWithFormat:@"动画开始前,视图的frame: %@", NSStringFromCGRect(self.animationImageView.frame)];
+    CGRect frame = self.animationImageView.frame;
+    self.hintLabel1.text = [NSString stringWithFormat:@"动画开始前，视图的frame：%@", NSStringFromCGRect(frame)];
 }
 
 - (void)viewDidDisappear:(BOOL)animated {
@@ -63,13 +64,14 @@
 
 - (void)animationTransformScaleX {
     CABasicAnimation *animation = [CABasicAnimation animationWithKeyPath:@"transform.scale.x"];
+    animation.delegate = self;
     animation.duration = 4.0;
     animation.fillMode = kCAFillModeForwards;
     animation.removedOnCompletion = NO;
     animation.timingFunction = [CAMediaTimingFunction functionWithName:kCAMediaTimingFunctionEaseInEaseOut];
+    
     animation.fromValue = [NSNumber numberWithFloat:1.0];
     animation.toValue = [NSNumber numberWithFloat:1.8];
-    animation.delegate = self;
     
     [self.animationImageView.layer addAnimation:animation forKey:nil];
 }
@@ -82,13 +84,14 @@
 }
 
 - (void)animationDidStop:(CAAnimation *)anim finished:(BOOL)flag {
-    self.hintLabel2.text = [NSString stringWithFormat:@"动画结束时,视图的frame: %@", NSStringFromCGRect(self.animationImageView.frame)];
-    
     if (flag) {
         NSLog(@"transfrom.scale.x 动画正常结束了");
     } else {
         NSLog(@"transfrom.scale.x 动画被打断结束了");
     }
+    
+    CGRect frame = self.animationImageView.frame;
+    self.hintLabel2.text = [NSString stringWithFormat:@"动画结束后，视图的frame：%@", NSStringFromCGRect(frame)];
 }
 
 

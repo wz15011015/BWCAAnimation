@@ -8,8 +8,7 @@ CoreAnimation相关知识及其使用示例。
 
 ## Usage
 
-#### <a id="> "></a>
-<img src="https://github.com/wz15011015github/BWCAAnimation/blob/master/CAAnimation/CAAnimation/Resources/CAAnimation_list.png" width="200" height="434">  <img src="https://github.com/wz15011015github/BWCAAnimation/blob/master/CAAnimation/CAAnimation/Resources/CABasicAnimation.gif" width="200" height="434">  <img src="https://github.com/wz15011015github/BWCAAnimation/blob/master/CAAnimation/CAAnimation/Resources/CAAnimationGroup.gif" width="200" height="434">  <img src="https://github.com/wz15011015github/BWCAAnimation/blob/master/CAAnimation/CAAnimation/Resources/CAAnimationHint.gif" width="200" height="434">
+<img src="https://github.com/wz15011015github/BWCAAnimation/blob/master/CAAnimation/Screenshots/CAAnimation_list.png" width="200" height="434">  <img src="https://github.com/wz15011015github/BWCAAnimation/blob/master/CAAnimation/Screenshots/CABasicAnimation.gif" width="200" height="434">  <img src="https://github.com/wz15011015github/BWCAAnimation/blob/master/CAAnimation/Screenshots/CAAnimationGroup.gif" width="200" height="434">  <img src="https://github.com/wz15011015github/BWCAAnimation/blob/master/CAAnimation/Screenshots/CAAnimationHint.gif" width="200" height="434">
 
 
 ## License

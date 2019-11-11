@@ -34,16 +34,16 @@
                      @"transform.translation.y (y轴方向上移动)",
                      @"contentsRect.size.width (横向拉伸缩放) (已无效)",
                      @"contentsRect.size.height (纵向拉伸缩放) (已无效)",
-                     @"bounds (大小缩放,中心位置不变)",
-                     @"position (中心位置变化,大小不变)",
+                     @"bounds (大小缩放，中心位置不变)",
+                     @"position (中心位置变化，大小不变)",
                      @"backgroundColor (背景颜色的变化)",
                      @"opacity (透明度变化)",
-                     @"contents (内容变化,比如UIImageView的图片)",
+                     @"contents (内容变化，比如UIImageView的图片)",
                      @"cornerRadius (圆角变化)",
                      @"borderWidth (边框线宽度变化)",
                      @"borderColor (边框线颜色变化)",
-                     @"strokeStart (CAShapeLayer的属性: 画笔开始)",
-                     @"strokeEnd (CAShapeLayer的属性: 画笔结束)"];
+                     @"strokeStart (CAShapeLayer的属性：画笔开始)",
+                     @"strokeEnd (CAShapeLayer的属性：画笔结束)"];
     
     [self.view addSubview:self.tableView];
 }
